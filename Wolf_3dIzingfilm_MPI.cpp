@@ -28,10 +28,10 @@ void period(long i,long j,long k)
    else down=spin[i][j-1][k];
    if(j==L-1) up=spin[i][0][k];
    else up=spin[i][j+1][k];
-//   if(k==0) zdown=0;
-//   else zdown=spin[i][j][k-1];
-//   if(k==L-1) zup=0;
-//   else zup=spin[i][j][k+1];
+   if(k==0) zdown=0;
+   else zdown=spin[i][j][k-1];
+   if(k==L-1) zup=0;
+   else zup=spin[i][j][k+1];
    isum=left+right+down+up+zdown+zup;
 }
 /****************************************************/
