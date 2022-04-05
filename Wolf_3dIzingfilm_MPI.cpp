@@ -167,6 +167,7 @@ int main(int argc,char *argv[])
   MPI_Comm_size(MPI_COMM_WORLD, &ProcNum);
   MPI_Comm_rank(MPI_COMM_WORLD, &ProcRank);
 
+
   for(p=0;p<N_prog;++p)
   {  sprintf(s,"Ln4=%ld ProcRank=%d N_prog=%ld.dat",L,ProcRank,p+1);
      fp=fopen(s,"a");
