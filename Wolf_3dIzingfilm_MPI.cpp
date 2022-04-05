@@ -13,7 +13,7 @@ double elaycum[20],elay2cum[20],mlaycum[20],mlay2cum[20],mlay4cum[20];
 double padd; /* 1 - exp(-2*J/T) */
 double t1,t2;
 long spin[128][128][20]; /* Lattice of spins */
-int ProcNum,ProcRank;
+int ThreadNum,ProcRank;
 #define N (L*L*l) /* Total number of spins */
 const double PI=3.14159265;
 FILE *fp,*fp1,*fp2[20],*config;
@@ -164,7 +164,7 @@ int main(int argc,char *argv[])
   Reading();
 
   MPI_Init(&argc,&argv);
-  MPI_Comm_size(MPI_COMM_WORLD, &ProcNum);
+  MPI_Comm_size(MPI_COMM_WORLD, &ThreadNum);
   MPI_Comm_rank(MPI_COMM_WORLD, &ProcRank);
 
 
